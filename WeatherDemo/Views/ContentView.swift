@@ -10,12 +10,25 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var locationManager = LocationManager()
+    var weaderManager = WeatherManager()
+    @State var weather: ResponseBody?
     
     var body: some View {
         VStack {
             
             if let location = locationManager.location {
-                Text("Your coordinates are: \(location.longitude), \(location.latitude)")
+                if let weather = weather {
+                    Text("Weather data fetched!")
+                } else {
+                    LoadingView()
+                        .task {
+                            do {
+                                weather = try await weaderManager.getCurrentWeather(latitude: location.latitude, longitude: location.longitude)
+                            } catch {
+                                print("Error getting weather: \(error.localizedDescription)")
+                            }
+                        }
+                }
             } else {
                 if locationManager.isLoading {
                     LoadingView()
@@ -33,5 +46,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 13 mini")
     }
 }

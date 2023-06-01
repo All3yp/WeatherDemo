@@ -14,6 +14,9 @@
 		64E5EC9A2A28090500ED9230 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5EC992A28090500ED9230 /* LocationManager.swift */; };
 		64E5EC9D2A28173300ED9230 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5EC9C2A28173300ED9230 /* WelcomeView.swift */; };
 		64E5ECA12A28216200ED9230 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5ECA02A28216200ED9230 /* LoadingView.swift */; };
+		CE4F964C2A283281003BFF01 /* ResponseBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F964B2A283281003BFF01 /* ResponseBody.swift */; };
+		CE67A5602A282F06008B9186 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A55F2A282F06008B9186 /* Constants.swift */; };
+		CE67A5622A282F5F008B9186 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67A5612A282F5F008B9186 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		64E5EC992A28090500ED9230 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		64E5EC9C2A28173300ED9230 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		64E5ECA02A28216200ED9230 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CE4F964B2A283281003BFF01 /* ResponseBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseBody.swift; sourceTree = "<group>"; };
+		CE67A55F2A282F06008B9186 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE67A5612A282F5F008B9186 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 		64E5EC892A28077C00ED9230 /* WeatherDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CE67A55F2A282F06008B9186 /* Constants.swift */,
+				CE67A5612A282F5F008B9186 /* WeatherManager.swift */,
+				CE4F964B2A283281003BFF01 /* ResponseBody.swift */,
 				64E5EC9B2A2816D300ED9230 /* Views */,
 				64E5EC982A2808F800ED9230 /* managers */,
 				64E5EC8A2A28077C00ED9230 /* WeatherDemoApp.swift */,
@@ -164,9 +173,12 @@
 			files = (
 				64E5EC8D2A28077C00ED9230 /* ContentView.swift in Sources */,
 				64E5EC8B2A28077C00ED9230 /* WeatherDemoApp.swift in Sources */,
+				CE4F964C2A283281003BFF01 /* ResponseBody.swift in Sources */,
 				64E5EC9A2A28090500ED9230 /* LocationManager.swift in Sources */,
+				CE67A5622A282F5F008B9186 /* WeatherManager.swift in Sources */,
 				64E5ECA12A28216200ED9230 /* LoadingView.swift in Sources */,
 				64E5EC9D2A28173300ED9230 /* WelcomeView.swift in Sources */,
+				CE67A5602A282F06008B9186 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +304,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 4X8K6Z86C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -302,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +324,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alley.WeatherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,9 +336,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = 4X8K6Z86C3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -330,6 +348,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,6 +356,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alley.WeatherDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
